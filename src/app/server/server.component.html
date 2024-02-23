@@ -1,0 +1,12 @@
+<h2> {{ age }} </h2>
+<button [disabled]="allowNewServer" (click)="onCreateNote()" class="btn btn-primary"> Add note </button>
+
+<p [ngStyle]="{'background-color': getColor()}" [ngClass]="{online: noteCreated }" *ngIf="noteCreated" [innerText]="noteCreationMessage"></p>
+<div *ngFor="let note of notes">
+    <p> note is created with the name {{note}} </p>
+</div>
+
+----
+
+<input type="text" class="form-control" [(ngModel)]="NoteName">
+<p > {{ NoteName}}</p>

@@ -1,0 +1,8 @@
+
+<button class="btn btn-primary" (click)="displayQuote()"> Display quote</button>
+
+<div *ngIf="quoteDisplay">
+<div *ngFor = "let quote of quotes; let i= index" [ngClass]="{'clicked': i >= 5}"  [ngStyle]="{'backgroundColor': i >= 5 ? 'blue' : 'transparent'}">
+    {{quote}}
+</div>
+</div>
