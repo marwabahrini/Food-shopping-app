@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 @Component({
-    selector: 'app-server',
+    selector: 'app-Note',
     templateUrl: './server.component.html',
     styles : [' .online { color : white; }']
 })
