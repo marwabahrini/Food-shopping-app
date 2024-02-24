@@ -1,0 +1,11 @@
+
+<div class="my-4">
+  <div class="flex flex-row bg-silver" *ngFor="let ingredient of ingredients">
+    <div class="mx-2 flex flex-col-2 items-center py-2">
+      <h5> {{ingredient.name}}</h5>
+      <p class="text-xs"> ({{ingredient.amount}})</p>
+    </div>
+  </div>
+  <app-shopping-list-edit></app-shopping-list-edit>
+</div>
+

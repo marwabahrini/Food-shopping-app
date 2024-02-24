@@ -1,0 +1,40 @@
+
+<form>
+  <div class="space-y-12">
+
+    <div class="border-b border-gray-900/10 pb-12">
+      <h2 class="text-base font-semibold leading-7 text-gray-900">Shopping list edit options</h2>
+
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
+          <div class="mt-2">
+            <input type="text" value="1"  name="name" id="name" autocomplete="given-name" class="border px-2 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300" data-hs-input-number-input>
+          </div>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label for="amount" class="block text-sm font-medium leading-6 text-gray-900">Amount</label>
+          <div class="mt-2 flex items-center space-x-4">
+            <input
+              type="number"
+              class="border px-2 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              [(ngModel)]="quantity"
+            />
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-6 flex items-center justify-end gap-x-6">
+    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add</button>
+    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
+    <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Clear</button>
+  </div>
+</form>
