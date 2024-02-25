@@ -31,8 +31,8 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
 
-            <a href="#" class=" rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Recipes</a>
-            <a href="#" class=" rounded-md px-3 py-2 text-sm font-medium">Shopping list</a>
+            <a href="#" class=" rounded-md px-3 py-2 text-sm font-medium" (click)="onSelect('recipe')" aria-current="page">Recipes</a>
+            <a href="#" class=" rounded-md px-3 py-2 text-sm font-medium" (click)="onSelect('shopping-list')">Shopping list</a>
           </div>
         </div>
       </div>

@@ -1,12 +1,27 @@
 
-<section class="w-full">
+ <section class="w-full">
   <div class="container mx-auto ">
 
-    <app-navbar></app-navbar>
+    <app-navbar (featureSelected)="onNavigate($event)"></app-navbar>
     <div class="grid-cols-1 mt-8">
-     <div><app-recipes></app-recipes></div>
-     <div><app-shopping-list></app-shopping-list></div>
+     <div><app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes></div>
+     <div><app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list></div>
     </div>
 
   </div>
 </section>
+
+ <!--
+ <section class="w-full mt-8">
+   <div class="container mx-auto ">
+ <app-cockpit (srCreated)="onAddedServer($event)" (bpCreated)="onAddedBlueprint($event)"></app-cockpit>
+     <div>
+       <h2> list of servers and blueprints </h2>
+       <app-aserver *ngFor =" let serverElement of serverElements" [srvElement]="serverElement">
+         <div *ngIf="serverElement.type === 'blueprint'" > <p class="text-purple-500 italic"> {{ serverElement.content }}</p> </div>
+       </app-aserver>
+     </div>
+   </div>
+ </section>
+ -->
+

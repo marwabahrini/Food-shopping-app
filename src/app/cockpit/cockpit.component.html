@@ -1,0 +1,33 @@
+<h1> add servers and blueprints </h1>
+
+<form>
+  <div class="space-y-12">
+
+    <div class="border-b border-gray-900/10 pb-12">
+
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Server Name</label>
+          <div class="mt-2">
+            <input type="text"  name="name" id="name" autocomplete="name" class="border px-2 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300" #inputServerName>
+          </div>
+        </div>
+
+        <div class="sm:col-span-3">
+          <label for="content" class="block text-sm font-medium leading-6 text-gray-900">Server Content</label>
+          <div class="mt-2">
+            <input type="text" [(ngModel)]="newServerContent"  name="content" id="content" autocomplete="given-name" class="border px-2 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-6 flex items-center justify-end gap-x-6">
+    <button type="submit" (click)="onAddServer (inputServerName)" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add Server</button>
+    <button type="submit" (click)="onAddBlueprint(inputServerName)" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add server blueprint</button>
+  </div>
+</form>

@@ -1,0 +1,7 @@
+
+<div class="pt-2 border-1 border-t-black border-b-black">
+  <div class="bg-silver"> <p> {{ element.name }}</p> </div>
+  <div *ngIf="element.type === 'server'" > <p class="text-red"> {{ element.content }}</p> </div>
+ <!-- <div *ngIf="element.type === 'blueprint'" > <p class="text-purple-500 italic"> {{ element.content }}</p> </div> -->
+  <ng-content></ng-content>
+</div>
